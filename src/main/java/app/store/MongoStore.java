@@ -14,7 +14,7 @@ public class MongoStore {
         client = MongoClients.create("mongodb://localhost:27017");
         collection = client.getDatabase("nosqllab").getCollection("ogrenciler");
 
-        collection.drop();  // Eğer istersen eski veriyi temizle
+        collection.drop();
 
         for (int i = 0; i < 10000; i++) {
             String id = "2025" + String.format("%06d", i);
